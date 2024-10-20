@@ -106,15 +106,15 @@ const CloudinaryWidget = () => {
                         }
                     }
                 }}
-                onSuccess={(result, { widget }) => {
+                onSuccess={(result) => {
                     const info = result?.info as ResourceInfo | undefined
                     if (info) {
                         setUploadedImageInfo(info)
                         setIsModalOpen(true)
                     }
                 }}
-                onQueuesEnd={(result, { widget }) => {
-                    widget.close();
+                onQueuesEnd={() => {
+                    
                 }}
             >
                 {({ open }) => {

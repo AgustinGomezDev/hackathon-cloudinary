@@ -5,7 +5,7 @@ const Loader = () => {
     const [score, setScore] = useState(0);
     const [ghostPosition, setGhostPosition] = useState({ x: 50, y: 50 });
     const [isVisible, setIsVisible] = useState(true);
-    const [speed, setSpeed] = useState(800);
+    const [speed, setSpeed] = useState(500);
 
     // Aumentar velocidad cada 5 puntos
     useEffect(() => {
@@ -20,7 +20,7 @@ const Loader = () => {
                 const newY = Math.random() * 80 + 10;
 
                 // Animación
-                setGhostPosition(prev => ({
+                setGhostPosition(({
                     x: newX,
                     y: newY
                 }));
@@ -56,7 +56,7 @@ const Loader = () => {
                             transition: `all ${speed / 1000}s ease-out`
                         }}
                     >
-                        <Ghost className=":w-10 h-10 text-white hover:text-orange-600" />
+                        <Ghost className="w-10 h-10 text-white hover:text-orange-600" />
                     </button>
                 )}
                 <div className="absolute top-4 right-4">

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, Suspense } from 'react';
 import { getCldImageUrl } from 'next-cloudinary';
 import { useSearchParams } from 'next/navigation';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
@@ -11,7 +11,7 @@ import monsters from '@/data/monsters.json'
 import { Download } from 'lucide-react'
 
 
-const Page = () => {
+const ImageComparison  = () => {
     const searchParams = useSearchParams();
     const id: string | null = searchParams.get('id');
     const gender: string | null = searchParams.get('gender');
@@ -23,32 +23,29 @@ const Page = () => {
 
     const originalImage = id ? getCldImageUrl({ src: id }) : null;
 
-    const setPrompt = () => {
+    const getGeneratedImageUrl = useCallback(() => {
+        if (!id) return null;
+
         let prompt = ''
 
-        if (monster) {
+        if(monster){
             const monsterPrompt = monsters.find((e) => e.id === parseInt(monster))
             prompt = `a very spooky ${gender} ${monsterPrompt?.prompt}`
         }
 
-        return prompt
-    }
-
-    const getGeneratedImageUrl = () => {
-        if (!id) return null;
         return getCldImageUrl({
             src: id,
             replaceBackground: changeBackground === 'true' ? 'A spooky graveyard with crooked tombstones covered in fog glowing jack-o-lanterns scattered among the graves and a full moon illuminating the scene' : '',
             replace: {
                 from: 'person',
-                to: setPrompt(),
+                to: prompt,
                 preserveGeometry: true
             },
             improve: true
         })
-    }
+    }, [id, monster, gender, changeBackground])
 
-    const loadImageWithRetries = async (src: string, maxRetries: number = 10): Promise<string> => {
+    const loadImageWithRetries = useCallback(async (src: string, maxRetries: number = 10): Promise<string> => {
         let attempts = 0;
         const baseDelay = 1000;
 
@@ -58,11 +55,11 @@ const Page = () => {
                 const result = await new Promise((resolve, reject) => {
                     const img = new Image();
                     img.onload = () => resolve(src);
-                    img.onerror = (error) => reject(error);
+                    img.onerror = () => reject(new Error('Error al cargar la imagen.'));
                     img.src = src;
                 })
                 return result as string;
-            } catch (error) {
+            } catch {
                 attempts++;
                 if (attempts === maxRetries) {
                     throw new Error(`Error al cargar la imagen después de ${maxRetries} intentos.`)
@@ -76,7 +73,7 @@ const Page = () => {
             if (freshUrl) src = freshUrl;
         }
         throw new Error('Intentos máximos alcanzados.');
-    }
+    }, [getGeneratedImageUrl])
 
     useEffect(() => {
         const url = getGeneratedImageUrl();
@@ -102,7 +99,7 @@ const Page = () => {
                 }
                 setIsLoading(false);
             });
-    }, [id, gender, monster, changeBackground]);
+    }, [id, getGeneratedImageUrl, loadImageWithRetries]);
 
     return (
         <div className='h-96 lg:h-[40rem] flex items-center justify-center px-5'>
@@ -151,5 +148,11 @@ const Page = () => {
         </div>
     );
 }
+
+const Page = () => (
+    <Suspense fallback={<Loader />}>
+        <ImageComparison />
+    </Suspense>
+);
 
 export default Page;
