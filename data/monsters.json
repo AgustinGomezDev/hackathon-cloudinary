@@ -1,0 +1,179 @@
+[
+    {
+        "name": "Esqueleto Animado",
+        "spookiness_level": 20,
+        "description": "Un esqueleto sin piel que cobra vida.",
+        "prompt": {
+            "effect": "descomposición",
+            "opacity": "70",
+            "color": "gray"
+        },
+        "replaceTo": "Efecto de descomposición, piel translúcida y estructura ósea visible."
+    },
+    {
+        "name": "Zombie",
+        "spookiness_level": 30,
+        "description": "Un cuerpo en descomposición que regresa a la vida.",
+        "prompt": {
+            "effect": "descomposición",
+            "tint": "green",
+            "contrast": "high"
+        },
+        "replaceTo": "Piel en descomposición, ojos vacíos, y colores oscuros con un tono verdoso."
+    },
+    {
+        "name": "Fantasma",
+        "spookiness_level": 40,
+        "description": "Una figura etérea, translúcida, y flotante.",
+        "prompt": {
+            "effect": "transparencia",
+            "color": "white",
+            "overlay": "mist"
+        },
+        "replaceTo": "Transparencia, efecto de desvanecimiento y una ligera niebla."
+    },
+    {
+        "name": "Vampiro",
+        "spookiness_level": 45,
+        "description": "Una criatura elegante con colmillos y piel pálida.",
+        "prompt": {
+            "effect": "palidez",
+            "tint": "red",
+            "contrast": "medium"
+        },
+        "replaceTo": "Piel pálida, colmillos afilados y ojos brillantes."
+    },
+    {
+        "name": "Hombre Lobo",
+        "spookiness_level": 50,
+        "description": "Una bestia feroz con garras y pelo oscuro.",
+        "prompt": {
+            "effect": "sharpness",
+            "color": "brown",
+            "overlay": "fur"
+        },
+        "replaceTo": "Garras afiladas, ojos feroces, y pelo oscuro."
+    },
+    {
+        "name": "Gárgola",
+        "spookiness_level": 55,
+        "description": "Estatua de piedra con rasgos demoníacos que cobra vida.",
+        "prompt": {
+            "effect": "stone_texture",
+            "color": "gray",
+            "sharpness": "high"
+        },
+        "replaceTo": "Piel gris de piedra y mirada petrificada."
+    },
+    {
+        "name": "Demonio",
+        "spookiness_level": 65,
+        "description": "Criatura infernal con cuernos y piel roja.",
+        "prompt": {
+            "effect": "fire_overlay",
+            "color": "red",
+            "contrast": "high"
+        },
+        "replaceTo": "Cuernos, piel rojiza, y un aura de fuego."
+    },
+    {
+        "name": "Bruja Desfigurada",
+        "spookiness_level": 70,
+        "description": "Una bruja con una apariencia deformada y maligna.",
+        "prompt": {
+            "effect": "wrinkles",
+            "tint": "dark_green",
+            "sharpness": "medium"
+        },
+        "replaceTo": "Piel arrugada, nariz larga, y mirada malvada."
+    },
+    {
+        "name": "Gusanos Gigantes",
+        "spookiness_level": 75,
+        "description": "Criatura viscosa y repulsiva que se arrastra bajo la tierra.",
+        "prompt": {
+            "effect": "slime_overlay",
+            "blur": "medium",
+            "contrast": "low"
+        },
+        "replaceTo": "Textura viscosa y deformaciones que recuerdan a gusanos gigantes."
+    },
+    {
+        "name": "Criatura del Pantano",
+        "spookiness_level": 80,
+        "description": "Entidad hecha de barro, musgo y agua estancada.",
+        "prompt": {
+            "effect": "mud_texture",
+            "color": "green",
+            "sharpness": "medium"
+        },
+        "replaceTo": "Textura de barro y musgo con ojos brillantes."
+    },
+    {
+        "name": "La Parca",
+        "spookiness_level": 85,
+        "description": "Figura encapuchada que representa la muerte.",
+        "prompt": {
+            "effect": "shadow_overlay",
+            "color": "black",
+            "opacity": "90"
+        },
+        "replaceTo": "Silueta oscura y ojos vacíos."
+    },
+    {
+        "name": "Mutante",
+        "spookiness_level": 90,
+        "description": "Un ser deformado con partes extra y aspecto grotesco.",
+        "prompt": {
+            "effect": "distortion",
+            "overlay": "extra_limbs",
+            "sharpness": "high"
+        },
+        "replaceTo": "Deformaciones grotescas y extremidades adicionales."
+    },
+    {
+        "name": "Poltergeist",
+        "spookiness_level": 95,
+        "description": "Un espíritu maligno invisible que mueve objetos.",
+        "prompt": {
+            "effect": "shadow",
+            "overlay": "objects_floating",
+            "blur": "high"
+        },
+        "replaceTo": "Sombras distorsionadas y objetos flotantes en la escena."
+    },
+    {
+        "name": "Criatura de Pesadilla",
+        "spookiness_level": 98,
+        "description": "Un ser deformado con tentáculos y formas abstractas.",
+        "prompt": {
+            "effect": "tentacles_overlay",
+            "distortion": "high",
+            "opacity": "60"
+        },
+        "replaceTo": "Formas abstractas y tentáculos deformados."
+    },
+    {
+        "name": "Abominación Lovecraftiana",
+        "spookiness_level": 100,
+        "description": "Criatura con tentáculos y múltiples ojos que desafía la lógica.",
+        "prompt": {
+            "effect": "tentacles_overlay",
+            "extra_eyes": "",
+            "blur": "medium"
+        },
+        "replaceTo": "Tentáculos retorcidos y múltiples ojos brillantes."
+    },
+    {
+        "name": "Ser Primordial",
+        "spookiness_level": 100,
+        "description": "Entidad antigua y alienígena con poder inmenso.",
+        "prompt": {
+            "effect": "dark_shadow",
+            "tentacles": "",
+            "distortion": "high",
+            "contrast": "high"
+        },
+        "replaceTo": "Sombras profundas y tentáculos gigantes."
+    }
+]
