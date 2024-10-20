@@ -7,20 +7,37 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import Loader from '@/components/Loader';
 import BackToHome from '@/components/BackToHome';
 import Button from '@/components/Button';
+import monsters from '@/data/monsters.json'
+import { Download } from 'lucide-react'
+
 
 const Page = () => {
     const searchParams = useSearchParams();
     const id: string | null = searchParams.get('id');
+    const gender: string | null = searchParams.get('gender');
+    const monster: string | null = searchParams.get('monster');
+    const changeBackground: string | null = searchParams.get('changeBackground');
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     const originalImage = id ? getCldImageUrl({ src: id }) : null;
 
+    const setPrompt = () => {
+        let prompt = ''
+
+        if (monster) {
+            const monsterPrompt = monsters.find((e) => e.id === parseInt(monster))
+            prompt = `a very spooky ${gender} ${monsterPrompt?.prompt}`
+        }
+
+        return prompt
+    }
+
     const url = id ? getCldImageUrl({
         src: id,
-        replaceBackground: 'dark halloween scene',
+        replaceBackground: changeBackground === 'true' ? 'A spooky graveyard with crooked tombstones covered in fog glowing jack-o-lanterns scattered among the graves and a full moon illuminating the scene' : '',
         replace: {
             from: 'person',
-            to: 'a zombie with decaying green skin and hollow eyes',
+            to: setPrompt(),
             preserveGeometry: true
         },
         improve: true
@@ -54,9 +71,9 @@ const Page = () => {
                 <Loader />
             ) : (
                 url && originalImage ? (
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col items-center gap-5'>
                         <ReactCompareSlider
-                            className='h-[20rem] md:h-[35rem]'
+                            className='h-[20rem] md:h-[35rem] shadow-xl'
                             itemOne={
                                 <ReactCompareSliderImage
                                     className='w-auto rounded-xl'
@@ -76,7 +93,7 @@ const Page = () => {
                                 />
                             }
                         />
-                        <Button text="Descargar" variant='outline' />
+                        <Button icon={Download} text="Descargar" variant='outline' cb={() => window.open(url, '_blank')} />
                     </div>
                 ) : (
                     <p>No se encontró la imagen.</p>

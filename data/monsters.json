@@ -1,179 +1,102 @@
 [
     {
-        "name": "Esqueleto Animado",
-        "spookiness_level": 20,
-        "description": "Un esqueleto sin piel que cobra vida.",
-        "prompt": {
-            "effect": "descomposición",
-            "opacity": "70",
-            "color": "gray"
-        },
-        "replaceTo": "Efecto de descomposición, piel translúcida y estructura ósea visible."
-    },
-    {
-        "name": "Zombie",
-        "spookiness_level": 30,
-        "description": "Un cuerpo en descomposición que regresa a la vida.",
-        "prompt": {
-            "effect": "descomposición",
-            "tint": "green",
-            "contrast": "high"
-        },
-        "replaceTo": "Piel en descomposición, ojos vacíos, y colores oscuros con un tono verdoso."
-    },
-    {
-        "name": "Fantasma",
-        "spookiness_level": 40,
-        "description": "Una figura etérea, translúcida, y flotante.",
-        "prompt": {
-            "effect": "transparencia",
-            "color": "white",
-            "overlay": "mist"
-        },
-        "replaceTo": "Transparencia, efecto de desvanecimiento y una ligera niebla."
-    },
-    {
+        "id": 1,
         "name": "Vampiro",
-        "spookiness_level": 45,
-        "description": "Una criatura elegante con colmillos y piel pálida.",
-        "prompt": {
-            "effect": "palidez",
-            "tint": "red",
-            "contrast": "medium"
-        },
-        "replaceTo": "Piel pálida, colmillos afilados y ojos brillantes."
+        "prompt": "vampire with sharp fangs pale skin and wearing a dark cloak standing in a gothic castle"
     },
     {
+        "id": 2,
         "name": "Hombre Lobo",
-        "spookiness_level": 50,
-        "description": "Una bestia feroz con garras y pelo oscuro.",
-        "prompt": {
-            "effect": "sharpness",
-            "color": "brown",
-            "overlay": "fur"
-        },
-        "replaceTo": "Garras afiladas, ojos feroces, y pelo oscuro."
+        "prompt": "werewolf with sharp claws and fur all over its body howling under a full moon"
     },
     {
+        "id": 3,
+        "name": "Momia",
+        "prompt": "ancient mummy wrapped in dusty bandages with glowing red eyes emerging from a dark tomb"
+    },
+    {
+        "id": 4,
+        "name": "Fantasma",
+        "prompt": "ghost floating in a dark haunted house with glowing white eyes and a flowing transparent body"
+    },
+    {
+        "id": 5,
+        "name": "Zombi",
+        "prompt": "zombie with decayed skin and hollow eyes dragging its feet through a dark forest"
+    },
+    {
+        "id": 6,
+        "name": "Esqueleto",
+        "prompt": "walking skeleton with glowing eyes holding a rusty sword and wearing tattered armor"
+    },
+    {
+        "id": 7,
         "name": "Gárgola",
-        "spookiness_level": 55,
-        "description": "Estatua de piedra con rasgos demoníacos que cobra vida.",
-        "prompt": {
-            "effect": "stone_texture",
-            "color": "gray",
-            "sharpness": "high"
-        },
-        "replaceTo": "Piel gris de piedra y mirada petrificada."
+        "prompt": "stone gargoyle with bat wings perched on a cathedral looking down with glowing eyes"
     },
     {
+        "id": 8,
+        "name": "Bruja",
+        "prompt": "evil witch with a pointy hat long nose and riding a broomstick through the night sky"
+    },
+    {
+        "id": 9,
         "name": "Demonio",
-        "spookiness_level": 65,
-        "description": "Criatura infernal con cuernos y piel roja.",
-        "prompt": {
-            "effect": "fire_overlay",
-            "color": "red",
-            "contrast": "high"
-        },
-        "replaceTo": "Cuernos, piel rojiza, y un aura de fuego."
+        "prompt": "terrifying demon with red skin large horns and fiery eyes standing in a fiery landscape"
     },
     {
-        "name": "Bruja Desfigurada",
-        "spookiness_level": 70,
-        "description": "Una bruja con una apariencia deformada y maligna.",
-        "prompt": {
-            "effect": "wrinkles",
-            "tint": "dark_green",
-            "sharpness": "medium"
-        },
-        "replaceTo": "Piel arrugada, nariz larga, y mirada malvada."
+        "id": 10,
+        "name": "Duende",
+        "prompt": "mischievous goblin with pointy ears and sharp teeth hiding in the shadows of a dark forest"
     },
     {
-        "name": "Gusanos Gigantes",
-        "spookiness_level": 75,
-        "description": "Criatura viscosa y repulsiva que se arrastra bajo la tierra.",
-        "prompt": {
-            "effect": "slime_overlay",
-            "blur": "medium",
-            "contrast": "low"
-        },
-        "replaceTo": "Textura viscosa y deformaciones que recuerdan a gusanos gigantes."
+        "id": 11,
+        "name": "Dragón",
+        "prompt": "massive dragon with fiery breath and scales flying over a burning village"
     },
     {
-        "name": "Criatura del Pantano",
-        "spookiness_level": 80,
-        "description": "Entidad hecha de barro, musgo y agua estancada.",
-        "prompt": {
-            "effect": "mud_texture",
-            "color": "green",
-            "sharpness": "medium"
-        },
-        "replaceTo": "Textura de barro y musgo con ojos brillantes."
+        "id": 12,
+        "name": "Kraken",
+        "prompt": "giant sea monster with enormous tentacles emerging from the ocean to attack a ship"
     },
     {
-        "name": "La Parca",
-        "spookiness_level": 85,
-        "description": "Figura encapuchada que representa la muerte.",
-        "prompt": {
-            "effect": "shadow_overlay",
-            "color": "black",
-            "opacity": "90"
-        },
-        "replaceTo": "Silueta oscura y ojos vacíos."
+        "id": 13,
+        "name": "Ciclope",
+        "prompt": "giant cyclops with one glowing eye and muscular body holding a giant club in a rocky wasteland"
     },
     {
-        "name": "Mutante",
-        "spookiness_level": 90,
-        "description": "Un ser deformado con partes extra y aspecto grotesco.",
-        "prompt": {
-            "effect": "distortion",
-            "overlay": "extra_limbs",
-            "sharpness": "high"
-        },
-        "replaceTo": "Deformaciones grotescas y extremidades adicionales."
+        "id": 14,
+        "name": "Espectro",
+        "prompt": "shadowy wraith with glowing red eyes and a tattered cloak floating in a graveyard"
     },
     {
-        "name": "Poltergeist",
-        "spookiness_level": 95,
-        "description": "Un espíritu maligno invisible que mueve objetos.",
-        "prompt": {
-            "effect": "shadow",
-            "overlay": "objects_floating",
-            "blur": "high"
-        },
-        "replaceTo": "Sombras distorsionadas y objetos flotantes en la escena."
+        "id": 15,
+        "name": "Golem",
+        "prompt": "massive stone golem with glowing blue runes carved into its body standing in an ancient temple"
     },
     {
-        "name": "Criatura de Pesadilla",
-        "spookiness_level": 98,
-        "description": "Un ser deformado con tentáculos y formas abstractas.",
-        "prompt": {
-            "effect": "tentacles_overlay",
-            "distortion": "high",
-            "opacity": "60"
-        },
-        "replaceTo": "Formas abstractas y tentáculos deformados."
+        "id": 16,
+        "name": "Harpía",
+        "prompt": "fierce harpy with bird wings and sharp claws flying through a stormy sky"
     },
     {
-        "name": "Abominación Lovecraftiana",
-        "spookiness_level": 100,
-        "description": "Criatura con tentáculos y múltiples ojos que desafía la lógica.",
-        "prompt": {
-            "effect": "tentacles_overlay",
-            "extra_eyes": "",
-            "blur": "medium"
-        },
-        "replaceTo": "Tentáculos retorcidos y múltiples ojos brillantes."
+        "id": 17,
+        "name": "Minotauro",
+        "prompt": "powerful minotaur with a bull head and muscular body holding an enormous axe inside a labyrinth"
     },
     {
-        "name": "Ser Primordial",
-        "spookiness_level": 100,
-        "description": "Entidad antigua y alienígena con poder inmenso.",
-        "prompt": {
-            "effect": "dark_shadow",
-            "tentacles": "",
-            "distortion": "high",
-            "contrast": "high"
-        },
-        "replaceTo": "Sombras profundas y tentáculos gigantes."
+        "id": 18,
+        "name": "Banshee",
+        "prompt": "screaming banshee with long white hair and tattered clothes floating in the air with a mournful expression"
+    },
+    {
+        "id": 19,
+        "name": "Ghoul",
+        "prompt": "ghoul with rotting flesh and sharp claws scavenging through a dark graveyard"
+    },
+    {
+        "id": 20,
+        "name": "Quimera",
+        "prompt": "terrifying chimera with the head of a lion the body of a goat and the tail of a serpent in a volcanic landscape"
     }
 ]
